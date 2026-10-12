@@ -277,6 +277,9 @@ function bindBookingForm() {
 
   phoneFields.forEach(({ input, error }) => {
     input.addEventListener("input", () => {
+      if (!/[^0-9-]/.test(input.value)) {
+        input.value = formatPhoneNumber(input.value);
+      }
       const hasInvalidCharacters = /[^0-9-]/.test(input.value);
       input.classList.toggle("phone-invalid", hasInvalidCharacters);
       error.hidden = !hasInvalidCharacters;
@@ -352,6 +355,14 @@ function bindBookingForm() {
 /* ---------- Utility ---------- */
 function isValidPhone(value) {
   return /^09\d{2}-\d{3}-\d{4}$/.test(value);
+}
+
+function formatPhoneNumber(value) {
+  const digits = value.replaceAll("-", "");
+  if (!digits.startsWith("09") || digits.length > 11) return value;
+  if (digits.length <= 4) return digits;
+  if (digits.length <= 7) return `${digits.slice(0, 4)}-${digits.slice(4)}`;
+  return `${digits.slice(0, 4)}-${digits.slice(4, 7)}-${digits.slice(7)}`;
 }
 
 function escapeHtml(str) {
