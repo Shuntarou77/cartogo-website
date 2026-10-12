@@ -42,13 +42,23 @@
                                     "apikey": cleanKey,
                                     "Authorization": `Bearer ${cleanKey}`,
                                     "Content-Type": "application/json",
-                                    "Prefer": "return=representation"
+                                    "Prefer": "return=minimal"
                                 },
                                 body: JSON.stringify(payload)
                             })
                             .then(async res => {
-                                const json = await res.json();
-                                return res.ok ? { data: json, error: null } : { data: null, error: json };
+                                const responseText = await res.text();
+                                let responseData = null;
+                                if (responseText) {
+                                    try {
+                                        responseData = JSON.parse(responseText);
+                                    } catch {
+                                        responseData = responseText;
+                                    }
+                                }
+                                return res.ok
+                                    ? { data: responseData, error: null }
+                                    : { data: null, error: responseData };
                             })
                             .catch(err => ({ data: null, error: err }));
                         },
