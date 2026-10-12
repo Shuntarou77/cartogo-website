@@ -311,7 +311,7 @@ function bindBookingForm() {
     }
     if (!isValidPhone(phone) || (secondaryPhone && !isValidPhone(secondaryPhone))) {
       msg.className = "form-msg error";
-      msg.textContent = "Please use 09xx-xxx-xxx for each phone number. Country codes are not accepted.";
+      msg.textContent = "Please use 09xx-xxx-xxxx for each phone number. Country codes are not accepted.";
       return;
     }
     if (new Date(returnDate) < new Date(pickupDate)) {
@@ -351,7 +351,7 @@ function bindBookingForm() {
 
 /* ---------- Utility ---------- */
 function isValidPhone(value) {
-  return /^09\d{2}-\d{3}-\d{3}$/.test(value);
+  return /^09\d{2}-\d{3}-\d{4}$/.test(value);
 }
 
 function escapeHtml(str) {
