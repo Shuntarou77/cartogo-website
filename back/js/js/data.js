@@ -85,10 +85,10 @@ const SEED_DATA = {
   },
 
   cars: [
-    { id: "c1", name: "Honda City — Ignited Red Metallic", category: "Sedan", seats: 5, transmission: "Automatic", fuel: "Gasoline", rate: 2200, image: "honda-city-red.jpg", blurb: "A stylish and comfortable sedan for city driving, business trips, and weekend getaways.", available: true },
-    { id: "c2", name: "Mitsubishi Mirage G4 — Red", category: "Sedan", seats: 5, transmission: "Automatic", fuel: "Gasoline", rate: 1900, image: "mirage-g4-red.jpg", blurb: "Fuel-efficient, easy to drive, and practical for everyday travel around Metro Manila.", available: true },
-    { id: "c3", name: "Mitsubishi Mirage G4 — Silver", category: "Sedan", seats: 5, transmission: "Automatic", fuel: "Gasoline", rate: 1900, image: "mirage-g4-silver.jpg", blurb: "A practical and economical choice for errands, work trips, and city adventures.", available: true },
-    { id: "c4", name: "Toyota Fortuner", category: "SUV", seats: 7, transmission: "Automatic", fuel: "Diesel", rate: 4500, image: "toyota-fortuner.jpg", blurb: "A spacious seven-seater SUV made for family trips, long drives, and out-of-town adventures.", available: true }
+    { id: "c1", name: "Honda City — Ignited Red Metallic", category: "Sedan", seats: 5, transmission: "Automatic", fuel: "Gasoline", rate: 2200, image: "assets/honda-city-red.jpg", blurb: "A stylish and comfortable sedan for city driving, business trips, and weekend getaways.", available: true },
+    { id: "c2", name: "Mitsubishi Mirage G4 — Red", category: "Sedan", seats: 5, transmission: "Automatic", fuel: "Gasoline", rate: 1900, image: "assets/mirage-g4-red.jpg", blurb: "Fuel-efficient, easy to drive, and practical for everyday travel around Metro Manila.", available: true },
+    { id: "c3", name: "Mitsubishi Mirage G4 — Silver", category: "Sedan", seats: 5, transmission: "Automatic", fuel: "Gasoline", rate: 1900, image: "assets/mirage-g4-silver.jpg", blurb: "A practical and economical choice for errands, work trips, and city adventures.", available: true },
+    { id: "c4", name: "Toyota Fortuner", category: "SUV", seats: 7, transmission: "Automatic", fuel: "Diesel", rate: 4500, image: "assets/toyota-fortuner.jpg", blurb: "A spacious seven-seater SUV made for family trips, long drives, and out-of-town adventures.", available: true }
   ],
 
   /* Real visitor submissions land here. Empty on first load, on purpose. */
